@@ -6,8 +6,10 @@
         <h1>Orders</h1>
         {% for order in list_of_orders %}
         <div>
-            <h2>{{order.customer}}:</h2>
-            <p>On {{order.order_date}} they ordered {{order.quantity}} {{order.book}}</p>
+            <a href="order/{{list_of_orders.index(order)+1}}">Link to order</a><h2>{{order.customer}}:</h2>
+            <p>Order date: {{order.order_date}}</p> 
+            <p>Item ordered: {{order.book}}</p>
+            <p>Number of items ordered:{{order.quantity}}</p>
 
 
 
