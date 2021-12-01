@@ -1,19 +1,22 @@
 <html>
     <head>
-        <title>{{title}} - Best BookShop on the planet</title>
+        <title>Order ID{{order_num}}</title>
     </head>
     <body>
-        <h1>Orders</h1>
-        {% for order in list_of_orders %}
+        <h1>Order: {{order_num}}</h1>
+        
+        
+        
+
         <div>
-            {{if order == <index>}}
-            <h2>Our very kind {{order.customer}}:</h2>
+            <h2>Our very kind customer {{order.customer}}s order:</h2>
             <p>On {{order.order_date}} they ordered {{order.quantity}} {{order.book}}</p>
+            
 
 
 
 
         </div>
-        {% endfor %}
+        
     </body>
 </html>
