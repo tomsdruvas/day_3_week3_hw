@@ -7,7 +7,7 @@
         <h1>Orders</h1>
         {% for order in list_of_orders %}
         <article>
-            <a href="/order/{{list_of_orders.index(order)+1}}"><h2>{{order.customer}}:</h2></a>
+            <a href="/samepage/{{list_of_orders.index(order)+1}}"><h2>{{order.customer}}:</h2></a>
             <p>Order date: {{order.order_date}}</p> 
             <p>Item ordered: {{order.book}}</p>
             <p>Number of items ordered:{{order.quantity}}</p>
@@ -17,6 +17,9 @@
 
         </article>
         <aside>
+           
+    
+                
             
         </aside>
         {% endfor %}

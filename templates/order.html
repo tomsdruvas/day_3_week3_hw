@@ -1,5 +1,7 @@
 <html>
     <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
         <title>Order ID{{order_num}}</title>
     </head>
     <body>
@@ -11,11 +13,9 @@
         <div>
             <h2>Our very kind customer {{order.customer}}s order:</h2>
             <p>On {{order.order_date}} they ordered {{order.quantity}} {{order.book}}</p>
+            <a href="/order">Back to the list of orders</a>
+
             
-
-
-
-
         </div>
         
     </body>

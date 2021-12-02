@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <title>Order ID{{order_num}}</title>
+    </head>
+    <body>
+        <h1>Order list</h1>
+        {% for order in list_of_orders %}
+        <article>
+            <a href="/samepage/{{list_of_orders.index(order)+1}}"><h3>{{order.customer}}</h3></a>
+
+        </article>
+        <aside>
+            
+        </aside>
+        {% endfor %}
+            
+        <h1>Order: {{order_num}}</h1>
+    
+        <div>
+            <p>Order date: {{order.order_date}}</p> 
+            <p>Item ordered: {{order.book}}</p>
+            <p>Number of items ordered:{{order.quantity}}</p>
+            <a href="/samepage">Back to the list of orders</a>
+
+            
+        </div>
+        
+    </body>
+</html>
